@@ -1,0 +1,42 @@
+﻿@model IEnumerable<VuaDoCau.Models.Product>
+@{
+    ViewData["Title"] = "Quản lý sản phẩm";
+}
+<h2 class="mb-3">Quản lý sản phẩm</h2>
+
+<a asp-action="Create" class="btn btn-primary mb-3">Thêm sản phẩm</a>
+
+<table class="table table-striped align-middle">
+    <thead>
+        <tr>
+            <th>Ảnh</th>
+            <th>Tên</th>
+            <th>SKU</th>
+            <th>Danh mục</th>
+            <th class="text-end">Giá</th>
+            <th class="text-end">Giá cũ</th>
+            <th class="text-end">Số lượng</th>   @* <--- thêm mới *@
+            <th class="text-end" style="width:160px"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@p.ImageUrl" style="width:60px;height:60px;object-fit:cover;border-radius:8px" />
+                </td>
+                <td>@p.Name</td>
+                <td>@p.Sku</td>
+                <td>@p.Category?.Name</td>
+                <td class="text-end">@p.Price.ToString("N0") đ</td>
+                <td class="text-end">@((p.OldPrice ?? 0).ToString("N0")) đ</td>
+                <td class="text-end">@p.Stock</td>   @* *@
+                <td class="text-end">
+                    <a asp-action="Edit" asp-route-id="@p.Id" class="btn btn-sm btn-outline-secondary">Sửa</a>
+                    <a asp-action="Delete" asp-route-id="@p.Id" class="btn btn-sm btn-outline-danger ms-1">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

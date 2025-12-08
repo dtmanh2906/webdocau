@@ -1,0 +1,154 @@
+﻿@using VuaDoCau.Models
+@model IEnumerable<Order>
+
+@{
+    ViewData["Title"] = "Quản lý đơn hàng";
+
+    string FormatVND(decimal v) => $"{v:N0} đ";
+
+    bool IsPending(string s)
+    {
+        s = (s ?? "").Trim();
+        return s.Equals("Pending", StringComparison.OrdinalIgnoreCase)
+            || s.Equals("Chờ xác nhận", StringComparison.OrdinalIgnoreCase)
+            || s.Equals("Cho xac nhan", StringComparison.OrdinalIgnoreCase);
+    }
+}
+
+<div class="container py-4">
+    <h1 class="mb-4">Quản lý đơn hàng</h1>
+
+    <div class="table-responsive">
+        <table class="table table-hover align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th style="width: 80px;">Mã</th>
+                    <th style="width: 200px;">Ngày</th>
+                    <th>Trạng thái</th>
+                    <th class="text-end" style="width: 160px;">Tạm tính</th>
+                    <th class="text-end" style="width: 140px;">Phí ship</th>
+                    <th class="text-end" style="width: 160px;">Tổng</th>
+                    <th style="width: 220px;"></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var order in Model.OrderByDescending(o => o.CreatedAt))
+                {
+                    <tr>
+                        <td><strong>#@order.Id</strong></td>
+                        <td>@order.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+
+                        <td>
+                            @order.Status
+
+                            @if (order.Status == "Canceled")
+                            {
+                                <span class="badge bg-danger ms-2">Đã hủy</span>
+                            }
+                            else if (order.Status == "Completed")
+                            {
+                                <span class="badge bg-success ms-2">Hoàn tất</span>
+                            }
+                            else if (order.Status == "Shipping")
+                            {
+                                <span class="badge bg-info text-dark ms-2">Đang giao</span>
+                            }
+                        </td>
+
+                        <td class="text-end">@FormatVND(order.Subtotal)</td>
+                        <td class="text-end">@FormatVND(order.ShippingFee)</td>
+                        <td class="text-end">@FormatVND(order.Total)</td>
+
+                        <td class="text-end">
+
+                            @* ======= Pending ======= *@
+                            @if (IsPending(order.Status))
+                            {
+                                <form asp-action="MarkShipping"
+                                      asp-controller="OrdersAdmin"
+                                      method="post"
+                                      class="d-inline">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="id" value="@order.Id" />
+                                    <button type="submit" class="btn btn-primary btn-sm">
+                                        Xác nhận giao
+                                    </button>
+                                </form>
+
+                                <form asp-action="Cancel"
+                                      asp-controller="OrdersAdmin"
+                                      method="post"
+                                      class="d-inline ms-2">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="id" value="@order.Id" />
+                                    <button type="submit"
+                                            class="btn btn-danger btn-sm"
+                                            onclick="return confirm('Bạn chắc chắn muốn xóa đơn  #@order.Id ?');">
+                                        Xóa đơn 
+                                    </button>
+                                </form>
+                            }
+
+                            @* ======= Shipping ======= *@
+                            else if (order.Status == "Shipping")
+                            {
+                                <span class="badge bg-info text-dark">Đang giao</span>
+                            }
+
+                            @* ======= Completed ======= *@
+                            else if (order.Status == "Completed")
+                            {
+                                <span class="badge bg-success">Hoàn tất</span>
+                            }
+
+                            @* ======= Canceled ======= *@
+                            else if (order.Status == "Canceled")
+                            {
+                                <span class="badge bg-danger">Đã hủy</span>
+                            }
+
+                        </td>
+                    </tr>
+
+                    @* ================== DÒNG PHỤ HIỂN THỊ SẢN PHẨM + NGƯỜI NHẬN ================== *@
+                    <tr class="table-borderless">
+                        <td></td>
+                        <td colspan="6" class="text-muted">
+
+                            <div class="mb-2">
+                                <strong>Sản phẩm:</strong><br />
+                                @if (order.Items != null && order.Items.Any())
+                                {
+                                    foreach (var it in order.Items)
+                                    {
+                                        <div>@it.Product?.Name × @it.Quantity</div>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>(Không có dòng hàng)</span>
+                                }
+                            </div>
+
+                            <div class="mt-2 p-2 bg-light rounded">
+                                <strong>Thông tin người nhận:</strong>
+                                <div><strong>Họ tên:</strong> @order.ReceiverName</div>
+                                <div><strong>Điện thoại:</strong> @order.Phone</div>
+                                <div><strong>Email:</strong> @order.Email</div>
+                                <div><strong>Địa chỉ:</strong> @order.Address</div>
+
+                                @if (!string.IsNullOrWhiteSpace(order.Note))
+                                {
+                                    <div><strong>Ghi chú:</strong> @order.Note</div>
+                                }
+                            </div>
+
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>

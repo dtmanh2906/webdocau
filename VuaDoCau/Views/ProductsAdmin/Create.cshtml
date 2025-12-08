@@ -1,0 +1,72 @@
+﻿@model VuaDoCau.Models.Product
+@{
+    ViewData["Title"] = "Thêm sản phẩm mới";
+}
+<h2 class="mb-3">Thêm sản phẩm mới</h2>
+
+<form asp-action="Create" method="post" enctype="multipart/form-data" class="row g-3" style="max-width:800px">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="col-md-6">
+        <label class="form-label">Tên sản phẩm</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-3">
+        <label class="form-label">SKU</label>
+        <input asp-for="Sku" class="form-control" />
+    </div>
+
+    <div class="col-md-3">
+        <label class="form-label">Slug</label>
+        <input asp-for="Slug" class="form-control" />
+    </div>
+
+    <div class="col-12">
+        <label class="form-label">Tóm tắt</label>
+        <input asp-for="Summary" class="form-control" />
+    </div>
+
+    <div class="col-md-4">
+        <label class="form-label">Giá (VNĐ)</label>
+        <input asp-for="Price" type="number" class="form-control" />
+    </div>
+
+    <div class="col-md-4">
+        <label class="form-label">Giá cũ (tuỳ chọn)</label>
+        <input asp-for="OldPrice" type="number" class="form-control" />
+    </div>
+
+    <!-- 🌟 THÊM MỤC SỐ LƯỢNG -->
+    <div class="col-md-4">
+        <label class="form-label">Số lượng</label>
+        <input asp-for="Stock" type="number" class="form-control" min="0" />
+        <span asp-validation-for="Stock" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-4">
+        <label class="form-label">Danh mục</label>
+        <select asp-for="CategoryId" class="form-select" asp-items="ViewBag.Categories"></select>
+    </div>
+
+    <div class="col-md-8">
+        <label class="form-label">Ảnh (URL – tuỳ chọn)</label>
+        <input asp-for="ImageUrl" class="form-control" />
+        <small class="text-muted">Nhập URL nếu ảnh có sẵn; hoặc upload file bên phải.</small>
+    </div>
+
+    <div class="col-md-4">
+        <label class="form-label">Upload ảnh</label>
+        <input type="file" name="ImageFile" class="form-control" accept="image/*" />
+    </div>
+
+    <div class="col-12">
+        <button class="btn btn-success">Lưu</button>
+        <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

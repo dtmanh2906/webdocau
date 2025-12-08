@@ -1,0 +1,203 @@
+﻿@using VuaDoCau.Models
+@model ProfileViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Hồ sơ cá nhân";
+
+    string FormatVND(decimal v) => $"{v:N0} đ";
+
+    bool IsPending(string s)
+    {
+        s = (s ?? "").Trim();
+        return s.Equals("Pending", StringComparison.OrdinalIgnoreCase)
+            || s.Equals("Chờ xác nhận", StringComparison.OrdinalIgnoreCase)
+            || s.Equals("Cho xac nhan", StringComparison.OrdinalIgnoreCase);
+    }
+
+    bool IsShipping(string s) =>
+        string.Equals((s ?? "").Trim(), "Shipping", StringComparison.OrdinalIgnoreCase);
+
+    int? rateOrderId = TempData["RateOrderId"] as int?;
+}
+
+<div class="container py-4">
+
+    <h2 class="mb-3">Hồ sơ cá nhân</h2>
+
+    <!-- ======================= THÔNG TIN NGƯỜI DÙNG ======================= -->
+    <div class="mb-4">
+        <div><strong>Họ tên:</strong> @Model.FullName</div>
+        <div><strong>Email:</strong> @Model.Email</div>
+        <div><strong>SDT:</strong> @Model.PhoneNumber</div>
+        <div><strong>Địa chỉ:</strong> @Model.Address</div>
+
+        <button class="btn btn-primary btn-sm mt-3"
+                data-bs-toggle="modal" data-bs-target="#editProfileModal">
+            ✏️ Sửa thông tin
+        </button>
+    </div>
+
+    <!-- ======================= LỊCH SỬ ĐƠN HÀNG ======================= -->
+    <h3 class="mb-3">Lịch sử đơn hàng</h3>
+
+    <div class="table-responsive">
+        <table class="table table-striped align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th style="width: 90px;">Mã đơn</th>
+                    <th style="width: 200px;">Ngày</th>
+                    <th>Trạng thái</th>
+                    <th class="text-end" style="width: 160px;">Tổng</th>
+                    <th style="width: 240px;"></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @if (Model.Orders == null || !Model.Orders.Any())
+                {
+                    <tr>
+                        <td colspan="5" class="text-center text-muted py-5">
+                            Chưa có đơn hàng.
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    foreach (var order in Model.Orders.OrderByDescending(o => o.CreatedAt))
+                    {
+                        <tr>
+                            <td><strong>#@order.Id</strong></td>
+                            <td>@order.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td>@order.Status</td>
+                            <td class="text-end">@FormatVND(order.Total)</td>
+
+                            <td class="text-end">
+                                @if (IsPending(order.Status))
+                                {
+                                    <form asp-action="Cancel" method="post" class="d-inline"
+                                          onsubmit="return confirm('Hủy đơn #@order.Id ?');">
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="id" value="@order.Id" />
+                                        <button class="btn btn-outline-danger btn-sm">Hủy đơn</button>
+                                    </form>
+                                }
+                                else if (IsShipping(order.Status))
+                                {
+                                    <form asp-action="ConfirmReceived" method="post" class="d-inline"
+                                          onsubmit="return confirm('Xác nhận đã nhận đơn #@order.Id ?');">
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="id" value="@order.Id" />
+                                        <button class="btn btn-success btn-sm">Đã nhận hàng</button>
+                                    </form>
+                                }
+                            </td>
+                        </tr>
+
+                        <!-- Chi tiết sản phẩm -->
+                        <tr class="table-borderless">
+                            <td></td>
+                            <td colspan="4" class="text-muted">
+
+                                @foreach (var it in order.Items)
+                                {
+                                    <div>@it.ProductName × @it.Quantity</div>
+                                }
+
+                                <!-- Block đánh giá -->
+                                @if (rateOrderId.HasValue && rateOrderId.Value == order.Id)
+                                {
+                                    <div class="border rounded p-3 bg-light mt-3">
+                                        <div class="fw-bold mb-2">
+                                            Đánh giá sản phẩm cho đơn #@order.Id
+                                        </div>
+
+                                        @foreach (var it in order.Items)
+                                        {
+                                            <div class="border rounded p-2 mb-3">
+                                                <div class="mb-2">@it.ProductName</div>
+
+                                                <form asp-controller="Reviews" asp-action="Add" method="post"
+                                                      class="d-flex gap-2 flex-wrap">
+                                                    @Html.AntiForgeryToken()
+
+                                                    <input type="hidden" name="productId" value="@it.ProductId" />
+
+                                                    <div class="d-flex align-items-center gap-1">
+                                                        @for (var s = 1; s <= 5; s++)
+                                                        {
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio"
+                                                                       name="stars"
+                                                                       id="p@it.ProductId-s@s"
+                                                                       value="@s"
+                                                                       @(s == 5 ? "checked" : null) />
+                                                                <label class="form-check-label"
+                                                                       for="p@it.ProductId-s@s">@s★</label>
+                                                            </div>
+                                                        }
+                                                    </div>
+
+                                                    <input name="comment" class="form-control flex-grow-1"
+                                                           placeholder="Nhận xét (tuỳ chọn)" />
+
+                                                    <button class="btn btn-primary btn-sm">Gửi</button>
+                                                </form>
+                                            </div>
+                                        }
+                                    </div>
+                                }
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- ======================= MODAL SỬA THÔNG TIN ======================= -->
+<div class="modal fade" id="editProfileModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <form asp-action="UpdateProfile" method="post">
+                @Html.AntiForgeryToken()
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Sửa thông tin cá nhân</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <label class="form-label">Họ tên</label>
+                        <input class="form-control" name="FullName" value="@Model.FullName" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Số điện thoại</label>
+                        <input class="form-control" name="PhoneNumber" value="@Model.PhoneNumber" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Địa chỉ</label>
+                        <input class="form-control" name="Address" value="@Model.Address" />
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Hủy
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        Lưu thay đổi
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

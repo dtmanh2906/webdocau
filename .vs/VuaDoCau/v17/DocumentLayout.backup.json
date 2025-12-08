@@ -1,0 +1,874 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\products\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\products\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\controllers\\ordersadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\controllers\\ordersadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\controllers\\productsadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\controllers\\productsadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\productsadmin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\productsadmin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\productsadmin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\productsadmin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\productsadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\productsadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\productsadmin\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\productsadmin\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\ordersadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\ordersadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\orders\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\orders\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\orders\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\orders\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\orders\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\orders\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\migrations\\20251204031205_khoitao3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\migrations\\20251204031205_khoitao3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\data\\vuadocaudbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\data\\vuadocaudbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\models\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\models\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\migrations\\20251203143445_addproductquantity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\migrations\\20251203143445_addproductquantity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\migrations\\20251015073311_addreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\migrations\\20251015073311_addreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\migrations\\20251201135908_khoitao2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\migrations\\20251201135908_khoitao2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\migrations\\20251127112126_khoitao1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\migrations\\20251127112126_khoitao1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\shared\\_stars.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\shared\\_stars.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|c:\\doan\\vuadocauclone\\vuadocau\\vuadocau\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6E742A45-05C9-48F5-91F2-FDFEEE55BEF4}|VuaDoCau\\VuaDoCau.csproj|solutionrelative:vuadocau\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrdersAdminController.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Controllers\\OrdersAdminController.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Controllers\\OrdersAdminController.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Controllers\\OrdersAdminController.cs",
+              "RelativeToolTip": "VuaDoCau\\Controllers\\OrdersAdminController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAuwHIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T09:25:34.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "VuaDoCau\\Controllers\\ProfileController.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAAwIYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T06:38:56.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "VuaDoCau\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAuwNwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T08:25:37.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Review.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Models\\Review.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Models\\Review.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Models\\Review.cs",
+              "RelativeToolTip": "VuaDoCau\\Models\\Review.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwA0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T07:32:16.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Products\\Detail.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\Products\\Detail.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Products\\Detail.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\Products\\Detail.cshtml",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAG8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-27T12:26:36.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\Products\\Index.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Products\\Index.cshtml*",
+              "RelativeToolTip": "VuaDoCau\\Views\\Products\\Index.cshtml*",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAAAK8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-27T12:26:37.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "VuaDoCau\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T12:10:04.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-27T11:40:07.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Controllers\\CartController.cs",
+              "RelativeToolTip": "VuaDoCau\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAuwMcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T09:43:19.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Cart\\Index.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\Cart\\Index.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Cart\\Index.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\Cart\\Index.cshtml",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAAAJMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-02T09:55:18.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProductsAdminController.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Controllers\\ProductsAdminController.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Controllers\\ProductsAdminController.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Controllers\\ProductsAdminController.cs",
+              "RelativeToolTip": "VuaDoCau\\Controllers\\ProductsAdminController.cs",
+              "ViewState": "AgIAANIAAAAAAAAAAAAAwN0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T08:25:46.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\ProductsAdmin\\Create.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\ProductsAdmin\\Create.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\ProductsAdmin\\Create.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\ProductsAdmin\\Create.cshtml",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-05T08:39:13.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ReviewsController.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Controllers\\ReviewsController.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Controllers\\ReviewsController.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Controllers\\ReviewsController.cs",
+              "RelativeToolTip": "VuaDoCau\\Controllers\\ReviewsController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T12:19:12.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-05T08:32:16.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\ProductsAdmin\\Edit.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\ProductsAdmin\\Edit.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\ProductsAdmin\\Edit.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\ProductsAdmin\\Edit.cshtml",
+              "ViewState": "AgIAADoAAAAAAAAAAAAAAEcAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-05T08:39:39.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Models\\Product.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Models\\Product.cs",
+              "RelativeToolTip": "VuaDoCau\\Models\\Product.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAiwCEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T14:24:34.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\ProductsAdmin\\Index.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\ProductsAdmin\\Index.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\ProductsAdmin\\Index.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\ProductsAdmin\\Index.cshtml",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAACEAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-05T08:39:02.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Data\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Data\\DbInitializer.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Data\\DbInitializer.cs",
+              "RelativeToolTip": "VuaDoCau\\Data\\DbInitializer.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAgwCsAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T08:04:25.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\ProductsAdmin\\Delete.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\ProductsAdmin\\Delete.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\ProductsAdmin\\Delete.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\ProductsAdmin\\Delete.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-05T09:56:50.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\OrdersAdmin\\Index.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\OrdersAdmin\\Index.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\OrdersAdmin\\Index.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\OrdersAdmin\\Index.cshtml",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-05T09:27:29.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "VuaDoCau\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T08:25:25.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "VuaDoCau\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T09:51:46.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "VuaDoCau\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "VuaDoCau\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAIIBAAAAAAAAAAAowIoBAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-02T09:55:50.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Profile\\Index.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\Profile\\Index.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Profile\\Index.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\Profile\\Index.cshtml",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAAAKIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-27T16:08:20.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Models\\Order.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Models\\Order.cs",
+              "RelativeToolTip": "VuaDoCau\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T08:24:04.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "VuaDoCau\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T06:50:54.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Models\\Category.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Models\\Category.cs",
+              "RelativeToolTip": "VuaDoCau\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T09:40:23.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "VuaDoCau\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T08:23:52.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-01T13:48:22.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Program.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Program.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Program.cs",
+              "RelativeToolTip": "VuaDoCau\\Program.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAwGoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T11:15:41.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Checkout.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Orders\\Checkout.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\Orders\\Checkout.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Orders\\Checkout.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\Orders\\Checkout.cshtml",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAAAGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-27T11:52:27.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Orders\\Create.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\Orders\\Create.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Orders\\Create.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\Orders\\Create.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-01T13:48:19.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Success.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Orders\\Success.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\Orders\\Success.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Orders\\Success.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\Orders\\Success.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-05T08:37:29.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "20251204031205_khoitao3.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Migrations\\20251204031205_khoitao3.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Migrations\\20251204031205_khoitao3.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Migrations\\20251204031205_khoitao3.cs",
+              "RelativeToolTip": "VuaDoCau\\Migrations\\20251204031205_khoitao3.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T03:12:06.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Models\\OrderItem.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Models\\OrderItem.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Models\\OrderItem.cs",
+              "RelativeToolTip": "VuaDoCau\\Models\\OrderItem.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T02:24:30.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Services\\CartService.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Services\\CartService.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Services\\CartService.cs",
+              "RelativeToolTip": "VuaDoCau\\Services\\CartService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T07:00:59.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAADkAAAAAAAAAAADwv0gAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-05T08:35:20.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "VuadocauDbContext.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Data\\VuadocauDbContext.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Data\\VuadocauDbContext.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Data\\VuadocauDbContext.cs",
+              "RelativeToolTip": "VuaDoCau\\Data\\VuadocauDbContext.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAcwBcAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T09:42:41.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Models\\CartItem.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Models\\CartItem.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Models\\CartItem.cs",
+              "RelativeToolTip": "VuaDoCau\\Models\\CartItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T07:01:44.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ProfileViewModel.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Models\\ProfileViewModel.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Models\\ProfileViewModel.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Models\\ProfileViewModel.cs",
+              "RelativeToolTip": "VuaDoCau\\Models\\ProfileViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T02:24:32.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "20251203143445_AddProductQuantity.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Migrations\\20251203143445_AddProductQuantity.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Migrations\\20251203143445_AddProductQuantity.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Migrations\\20251203143445_AddProductQuantity.cs",
+              "RelativeToolTip": "VuaDoCau\\Migrations\\20251203143445_AddProductQuantity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T14:34:46.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAAAFoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-03T03:03:56.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-02T09:52:19.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-02T09:52:24.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "20251015073311_AddReview.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Migrations\\20251015073311_AddReview.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Migrations\\20251015073311_AddReview.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Migrations\\20251015073311_AddReview.cs",
+              "RelativeToolTip": "VuaDoCau\\Migrations\\20251015073311_AddReview.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAgwEgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T07:33:11.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "20251201135908_khoitao2.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Migrations\\20251201135908_khoitao2.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Migrations\\20251201135908_khoitao2.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Migrations\\20251201135908_khoitao2.cs",
+              "RelativeToolTip": "VuaDoCau\\Migrations\\20251201135908_khoitao2.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T00:38:13.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "20251127112126_khoitao1.cs",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Migrations\\20251127112126_khoitao1.cs",
+              "RelativeDocumentMoniker": "VuaDoCau\\Migrations\\20251127112126_khoitao1.cs",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Migrations\\20251127112126_khoitao1.cs",
+              "RelativeToolTip": "VuaDoCau\\Migrations\\20251127112126_khoitao1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T16:54:49.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\appsettings.json",
+              "RelativeDocumentMoniker": "VuaDoCau\\appsettings.json",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\appsettings.json",
+              "RelativeToolTip": "VuaDoCau\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-27T11:16:33.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "_Stars.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Shared\\_Stars.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\Shared\\_Stars.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Shared\\_Stars.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\Shared\\_Stars.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-15T07:34:28.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-02T09:53:01.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "VuaDoCau\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "VuaDoCau\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-02T10:05:58.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "VuaDoCau\\appsettings.Development.json",
+              "ToolTip": "C:\\DoAn\\VuaDoCauClone\\VuaDoCau\\VuaDoCau\\appsettings.Development.json",
+              "RelativeToolTip": "VuaDoCau\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-02T09:26:23.652Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

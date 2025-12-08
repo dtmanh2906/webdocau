@@ -1,0 +1,17 @@
+﻿@model VuaDoCau.Models.Order
+@{
+	ViewData["Title"] = "Đặt hàng thành công";
+}
+<div class="alert alert-success">
+	<h4>Đặt hàng thành công!</h4>
+	<div>Mã đơn: #@Model.Id — Ngày: @Model.CreatedAt.ToLocalTime()</div>
+</div>
+<h5>Chi tiết:</h5>
+<ul>
+	@foreach (var i in Model.Items)
+	{
+		<li>@i.Product.Name × @i.Quantity — @string.Format("{0:N0} đ", i.LineTotal)</li>
+	}
+</ul>
+<p><strong>Tổng cộng: @string.Format("{0:N0} đ", Model.Total)</strong></p>
+<a class="btn btn-primary" asp-controller="Home" asp-action="Index">Về trang chủ</a>

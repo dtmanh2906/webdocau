@@ -1,0 +1,252 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using System.Text.Json
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    // ===== Đếm số lượng sản phẩm trong giỏ từ Session["CART"] =====
+    int cartCount = 0;
+
+    var cartJson = Context.Session.GetString("CART"); // <-- KEY ĐÚNG
+    if (!string.IsNullOrEmpty(cartJson))
+    {
+        try
+        {
+            using var doc = JsonDocument.Parse(cartJson);
+            var root = doc.RootElement;
+
+            // Dữ liệu là mảng các Line { ProductId, Quantity }
+            if (root.ValueKind == JsonValueKind.Array)
+            {
+                foreach (var el in root.EnumerateArray())
+                {
+                    if (el.TryGetProperty("Quantity", out var q) && q.ValueKind == JsonValueKind.Number)
+                        cartCount += q.GetInt32();
+                }
+            }
+            // Trường hợp khác (phòng hờ)
+            else if (root.ValueKind == JsonValueKind.Object && root.TryGetProperty("Items", out var arr) && arr.ValueKind == JsonValueKind.Array)
+            {
+                foreach (var el in arr.EnumerateArray())
+                {
+                    if (el.TryGetProperty("Quantity", out var q) && q.ValueKind == JsonValueKind.Number)
+                        cartCount += q.GetInt32();
+                }
+            }
+        }
+        catch { /* bỏ qua lỗi parse */ }
+    }
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - VuaĐồCâu</title>
+
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- HEADER -->
+    <header class="border-bottom bg-white position-sticky top-0" style="z-index:1030;">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/logo.png" alt="logo" width="36" height="36" class="rounded-circle" />
+                    <span class="fw-bold">VuaĐồCâu</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Danh mục</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" asp-controller="Products" asp-action="Index">Tất cả sản phẩm</a></li>
+                                <li><a class="dropdown-item" asp-controller="Products" asp-action="Index" asp-route-categoryId="1">Cần câu</a></li>
+                                <li><a class="dropdown-item" asp-controller="Products" asp-action="Index" asp-route-categoryId="2">Máy câu</a></li>
+                                <li><a class="dropdown-item" asp-controller="Products" asp-action="Index" asp-route-categoryId="3">Dây / Mồi / Phụ kiện</a></li>
+                            </ul>
+                        </li>
+                        @* Giỏ hàng đã chuyển qua dropdown tài khoản *@
+                        @* <li class="nav-item"><a class="nav-link" asp-controller="Cart" asp-action="Index">Giỏ hàng</a></li> *@
+                    </ul>
+
+                    <!-- Search -->
+                    <form class="d-flex me-2" asp-controller="Products" asp-action="Index" method="get">
+                        <div class="input-group">
+                            <span class="input-group-text">🔍</span>
+
+                            <!-- Giữ lại categoryId khi tìm kiếm -->
+                            <input type="hidden" name="categoryId" value="@Context.Request.Query["categoryId"]" />
+
+                            <input class="form-control"
+                                   type="search"
+                                   name="q"
+                                   placeholder="Tìm sản phẩm, thương hiệu..."
+                                   value="@ViewContext.HttpContext.Request.Query["q"]" />
+
+                            <button class="btn btn-primary" type="submit">Tìm</button>
+                        </div>
+                    </form>
+
+
+                    <!-- Account -->
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
+                        <div class="dropdown">
+                            <a class="btn btn-outline-secondary dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                @User.Identity!.Name
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <!-- Giỏ hàng + badge số lượng -->
+                                <li>
+                                    <a class="dropdown-item d-flex justify-content-between align-items-center"
+                                       asp-controller="Cart" asp-action="Index">
+                                        <span>Giỏ hàng</span>
+                                        <span class="badge rounded-pill bg-primary">@cartCount</span>
+                                    </a>
+                                </li>
+
+                                <li><a class="dropdown-item" asp-controller="Profile" asp-action="Index">Hồ sơ cá nhân</a></li>
+
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li><a class="dropdown-item text-danger" asp-controller="ProductsAdmin" asp-action="Index">Quản lý sản phẩm</a></li>
+                                    <li><a class="dropdown-item text-danger" asp-controller="OrdersAdmin" asp-action="Index">Quản lý đơn hàng</a></li>
+                                }
+
+                                <li><hr class="dropdown-divider" /></li>
+                                <li>
+                                    <form asp-controller="Account" asp-action="Logout" method="post" class="px-3 py-1">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn btn-danger w-100">Đăng xuất</button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="d-flex gap-2">
+                            <a class="btn btn-outline-secondary" asp-controller="Account" asp-action="Login">Đăng nhập</a>
+                            <a class="btn btn-success" asp-controller="Account" asp-action="Register">Đăng ký</a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main role="main" class="flex-fill">
+
+        <!-- ======= ALERTS / TempData MESSAGES ======= -->
+        <div class="container">
+            @if (TempData["Success"] != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show text-center mt-3 auto-dismiss" role="alert">
+                    @TempData["Success"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show text-center mt-3 auto-dismiss" role="alert">
+                    @TempData["Error"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+            @* Tuỳ chọn thêm các loại khác *@
+            @if (TempData["Info"] != null)
+            {
+                <div class="alert alert-info alert-dismissible fade show text-center mt-3 auto-dismiss" role="alert">
+                    @TempData["Info"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+            @if (TempData["Warning"] != null)
+            {
+                <div class="alert alert-warning alert-dismissible fade show text-center mt-3 auto-dismiss" role="alert">
+                    @TempData["Warning"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+        </div>
+        <!-- ======= END ALERTS ======= -->
+        @RenderBody()
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer border-top mt-5">
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-12 col-lg-5">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <img src="~/images/logo.png" alt="logo" width="36" height="36" class="rounded-circle" />
+                        <span class="fw-bold">VuaĐồCâu</span>
+                    </div>
+                    <p class="mb-2 text-muted">
+                        Shop đồ câu &amp; phụ kiện – chọn lọc, giá tốt, giao nhanh. Trải nghiệm mua sắm mát lành như một buổi câu.
+                    </p>
+                    <div class="small">
+                        <div>📧 <a href="mailto:thson1602@gmail.com">thson1602@gmail.com</a></div>
+                        <div>📞 <a href="tel:0886214922">0886 214 922</a></div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <h6 class="fw-bold mb-3">Liên kết nhanh</h6>
+                    <ul class="list-unstyled small">
+                        <li><a class="link-secondary text-decoration-none" asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+                        <li><a class="link-secondary text-decoration-none" asp-controller="Products" asp-action="Index">Sản phẩm</a></li>
+                        <li><a class="link-secondary text-decoration-none" asp-controller="Cart" asp-action="Index">Giỏ hàng</a></li>
+                        <li><a class="link-secondary text-decoration-none" asp-controller="Profile" asp-action="Index">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                    <h6 class="fw-bold mb-3">Nhận ưu đãi</h6>
+                    <form class="input-group">
+                        <input type="email" class="form-control" placeholder="Email của bạn" />
+                        <button class="btn btn-teal" type="button">Đăng ký</button>
+                    </form>
+                    <div class="small text-muted mt-2">Chỉ gửi tin hữu ích. Có thể huỷ bất cứ lúc nào.</div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center pt-4 mt-4 border-top small text-muted">
+                <div>© 2025 Vua Đồ Câu</div>
+                <a class="link-secondary text-decoration-none" asp-controller="Home" asp-action="Privacy">Điều khoản &amp; Chính sách</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Tự đóng tất cả alert có class auto-dismiss sau 4 giây
+        window.addEventListener('DOMContentLoaded', function () {
+            const alerts = document.querySelectorAll('.auto-dismiss');
+            alerts.forEach(function (el) {
+                setTimeout(function () {
+                    try {
+                        const bsAlert = new bootstrap.Alert(el);
+                        bsAlert.close();
+                    } catch (e) { /* ignore */ }
+                }, 4000);
+            });
+        });
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿@model VuaDoCau.Models.Product
+@{
+    ViewData["Title"] = "Xóa sản phẩm";
+}
+<h2 class="mb-3 text-danger">Xóa sản phẩm</h2>
+
+<div class="card mb-3" style="max-width:720px">
+    <div class="card-body">
+        <div class="d-flex">
+            <img src="@Model.ImageUrl" style="width:120px;height:120px;object-fit:cover;border-radius:8px" class="me-3" />
+            <div>
+                <h5>@Model.Name</h5>
+                <div class="text-muted">SKU: @Model.Sku</div>
+                <div class="text-muted">Slug: @Model.Slug</div>
+                <div class="mt-2">Giá: <strong>@Model.Price.ToString("N0") đ</strong></div>
+                @if (Model.OldPrice.HasValue)
+                {
+                    <div>Giá cũ: @Model.OldPrice.Value.ToString("N0") đ</div>
+                }
+                <div class="small mt-2">Tóm tắt: @Model.Summary</div>
+            </div>
+        </div>
+        <hr />
+        <form asp-action="Delete" method="post">
+            <input type="hidden" asp-for="Id" />
+            <button class="btn btn-danger">Xác nhận xóa</button>
+            <a asp-action="Index" class="btn btn-secondary ms-2">Hủy</a>
+        </form>
+    </div>
+</div>

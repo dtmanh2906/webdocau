@@ -1,0 +1,175 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using Microsoft.EntityFrameworkCore
+@inject VuaDoCau.Data.VuaDoCauDbContext Db
+
+@{
+    ViewData["Title"] = "Sản phẩm";
+
+    var categoryIdStr = Context.Request.Query["categoryId"].ToString();
+    var q = Context.Request.Query["q"].ToString();
+
+    // Lấy danh mục
+    var categories = await Db.Categories.ToListAsync();
+
+    // Query sản phẩm
+    var productsQuery = Db.Products
+        .Include(p => p.Category)
+        .AsQueryable();
+
+    // Lọc theo danh mục
+    if (!string.IsNullOrEmpty(categoryIdStr) && int.TryParse(categoryIdStr, out var categoryId))
+    {
+        productsQuery = productsQuery.Where(p => p.CategoryId == categoryId);
+    }
+
+    // Lấy sản phẩm ban đầu
+    var productsList = await productsQuery
+        .OrderByDescending(p => p.Id)
+        .ToListAsync();
+
+    // ===== Tìm kiếm theo tên =====
+    string Normalize(string input)
+    {
+        if (string.IsNullOrWhiteSpace(input)) return string.Empty;
+        input = input.Trim().ToLowerInvariant();
+        string formD = input.Normalize(System.Text.NormalizationForm.FormD);
+        var sb = new System.Text.StringBuilder();
+        foreach (var ch in formD)
+        {
+            var uc = System.Globalization.CharUnicodeInfo.GetUnicodeCategory(ch);
+            if (uc != System.Globalization.UnicodeCategory.NonSpacingMark)
+                sb.Append(ch);
+        }
+        var noDiacritics = sb.ToString().Normalize(System.Text.NormalizationForm.FormC);
+        return System.Text.RegularExpressions.Regex.Replace(noDiacritics, @"[^a-z0-9\s]", "").Trim();
+    }
+
+    if (!string.IsNullOrWhiteSpace(q))
+    {
+        var tokens = Normalize(q).Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+        productsList = productsList
+            .Where(p =>
+            {
+                var text = Normalize(p.Name);
+                return tokens.All(t => text.Contains(t));
+            })
+            .ToList();
+    }
+
+    var productIds = productsList.Select(p => p.Id).ToList();
+
+    // ===== Rating =====
+    var ratingStats = await Db.Reviews
+        .Where(r => productIds.Contains(r.ProductId))
+        .GroupBy(r => r.ProductId)
+        .Select(g => new
+        {
+            ProductId = g.Key,
+            Avg = g.Average(x => x.Stars),
+            Cnt = g.Count()
+        })
+        .ToDictionaryAsync(
+            x => x.ProductId,
+            x => new { Avg = (decimal)x.Avg, Cnt = x.Cnt }
+        );
+}
+
+<div class="container py-4">
+    <h1 class="h4 mb-3">Sản phẩm</h1>
+
+    <!-- DANH MỤC -->
+    <div class="mb-3 d-flex flex-wrap gap-2 align-items-center">
+        <label for="categorySelect" class="form-label mb-0 me-2">Chọn danh mục:</label>
+
+        <select id="categorySelect" class="form-select w-auto"
+                onchange="onCategoryChange(this.value)">
+            <option value="">Tất cả sản phẩm</option>
+
+            @foreach (var category in categories)
+            {
+                <option value="@category.Id" selected="@(category.Id.ToString() == categoryIdStr)">
+                    @category.Name
+                </option>
+            }
+        </select>
+    </div>
+
+    <!-- DANH SÁCH SẢN PHẨM -->
+    <div class="row g-3 mt-3">
+
+        @foreach (var item in productsList)
+        {
+            var hasR = ratingStats.TryGetValue(item.Id, out var r);
+            var avg = hasR ? Math.Round(r!.Avg, 2) : 0m;
+            var cnt = hasR ? r!.Cnt : 0;
+
+            // GIỐNG HOME: LẤY TỪ CỘT item.Purchased
+            var bought = item.Purchased;
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100">
+
+                    <a asp-controller="Products" asp-action="Details" asp-route-id="@item.Id" class="text-decoration-none">
+                        <div class="product-thumb-wrapper">
+                            <img src="@(string.IsNullOrWhiteSpace(item.ImageUrl) ? "/images/no-image.png" : item.ImageUrl)"
+                                 class="product-thumb-img"
+                                 alt="@item.Name" />
+                        </div>
+                    </a>
+
+                    <div class="card-body d-flex flex-column">
+
+                        <a asp-controller="Products" asp-action="Details"
+                           asp-route-id="@item.Id" class="text-decoration-none text-dark">
+                            <h6 class="card-title text-truncate">@item.Name</h6>
+                        </a>
+
+                        @{
+                            int full = (int)Math.Floor(avg);
+                            bool half = (avg - full) >= 0.5m;
+                            int empty = 5 - full - (half ? 1 : 0);
+                            var starStr = new string('★', full) + (half ? "☆" : "") + new string('☆', empty);
+                        }
+
+                        <div class="small text-muted mb-1 d-flex align-items-center gap-2">
+                            <span class="text-warning">@starStr</span>
+                            <span>(@cnt)</span>
+                            <span class="ms-2">Đã mua: <strong>@bought</strong></span>
+                        </div>
+
+                        <div class="mt-auto">
+                            <div class="fw-bold text-danger mb-2">
+                                @String.Format("{0:N0} đ", item.Price)
+                            </div>
+
+                            <form asp-controller="Cart" asp-action="Add" method="post" class="d-flex gap-2">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="productId" value="@item.Id" />
+                                <input type="hidden" name="quantity" value="1" />
+                                <button type="submit" class="btn btn-primary btn-sm">Thêm vào giỏ</button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+
+    @if (!productsList.Any())
+    {
+        <div class="alert alert-info mt-3 text-center">Không tìm thấy sản phẩm nào.</div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        function onCategoryChange(val) {
+            var url = '@Url.Action("Index", "Products")';
+            if (val) url += '?categoryId=' + encodeURIComponent(val);
+            window.location.href = url;
+        }
+    </script>
+}

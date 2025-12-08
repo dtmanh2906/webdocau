@@ -1,0 +1,147 @@
+﻿@model VuaDoCau.Controllers.CartController.CartVM
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Giỏ hàng";
+    var hasItems = Model?.Items != null && Model.Items.Any();
+}
+
+<div class="container py-4">
+    <h1 class="h3 mb-3">Giỏ hàng</h1>
+
+    @if (TempData["CartMessage"] != null)
+    {
+        <div class="alert alert-success">@TempData["CartMessage"]</div>
+    }
+    @if (TempData["CartError"] != null)
+    {
+        <div class="alert alert-warning">@TempData["CartError"]</div>
+    }
+
+    @if (!hasItems)
+    {
+        <div class="alert alert-info">Giỏ hàng của bạn đang trống.</div>
+
+        <div class="d-flex gap-2">
+            <a class="btn btn-outline-secondary" asp-controller="Products" asp-action="Index">Tiếp tục mua sắm</a>
+            <a class="btn btn-success" asp-controller="Orders" asp-action="Checkout">Đặt hàng</a>
+        </div>
+    }
+    else
+    {
+        <form asp-controller="Cart" asp-action="CheckoutSelected" method="post">
+            @Html.AntiForgeryToken()
+
+            <div class="table-responsive mb-3">
+                <table class="table align-middle">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" id="checkAll" /></th>
+                            <th>Sản phẩm</th>
+                            <th>Giá</th>
+                            <th>Số lượng</th>
+                            <th class="text-end">Tạm tính</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var it in Model.Items)
+                        {
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="selectedIds" value="@it.ProductId" class="checkItem" />
+                                </td>
+
+                                <td>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="@it.ImageUrl" width="48" height="48"
+                                             class="rounded border bg-light object-fit-cover" />
+                                        <div class="fw-semibold">@it.Name</div>
+                                    </div>
+                                </td>
+
+                                <td>@it.UnitPrice.ToString("N0") đ</td>
+
+                                <td>
+                                    <!-- Nút trừ -->
+                                    <a asp-action="Update"
+                                       asp-route-productId="@it.ProductId"
+                                       asp-route-quantity="@(it.Quantity - 1)"
+                                       class="btn btn-sm btn-outline-secondary @(it.Quantity <= 1 ? "disabled" : "")">
+                                        -
+                                    </a>
+
+                                    <span class="mx-2">@it.Quantity</span>
+
+                                    <!-- Nút cộng -->
+                                    <a asp-action="Update"
+                                       asp-route-productId="@it.ProductId"
+                                       asp-route-quantity="@(it.Quantity + 1)"
+                                       class="btn btn-sm btn-outline-secondary">
+                                        +
+                                    </a>
+                                </td>
+
+                                <td class="text-end fw-semibold">
+                                    @it.Subtotal.ToString("N0") đ
+                                </td>
+
+                                <td>
+                                    <button formmethod="post"
+                                            formaction="/Cart/Remove?productId=@it.ProductId"
+                                            class="btn btn-link text-danger p-0 small">
+                                        Xoá
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <th colspan="4" class="text-end">Tạm tính:</th>
+                            <th class="text-end">@Model.Subtotal.ToString("N0") đ</th>
+                        </tr>
+                        <tr>
+                            <th colspan="4" class="text-end">Phí vận chuyển:</th>
+                            <th class="text-end">@Model.Shipping.ToString("N0") đ</th>
+                        </tr>
+                        <tr>
+                            <th colspan="4" class="text-end">Tổng cộng:</th>
+                            <th class="text-end text-success fs-5">@Model.Total.ToString("N0") đ</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="d-flex gap-2 flex-wrap">
+                <a class="btn btn-outline-secondary" asp-controller="Products" asp-action="Index">
+                    Tiếp tục mua sắm
+                </a>
+
+                <button type="submit" class="btn btn-primary">
+                    Thanh toán sản phẩm đã chọn
+                </button>
+
+                <a class="btn btn-success" asp-controller="Orders" asp-action="Checkout">
+                    Thanh toán toàn bộ
+                </a>
+
+                <button formmethod="post" formaction="/Cart/Clear"
+                        class="btn btn-outline-danger ms-auto">
+                    Xoá toàn bộ
+                </button>
+            </div>
+        </form>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById("checkAll")?.addEventListener("change", function () {
+            const checked = this.checked;
+            document.querySelectorAll(".checkItem").forEach(cb => cb.checked = checked);
+        });
+    </script>
+}

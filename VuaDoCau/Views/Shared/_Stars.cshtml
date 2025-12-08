@@ -1,0 +1,8 @@
+﻿@model decimal
+@{
+    var full = (int)Math.Floor(Model);
+    var half = (Model - full) >= 0.5m;
+    var empty = 5 - full - (half ? 1 : 0);
+    var starStr = new string('★', full) + (half ? "☆" : "") + new string('☆', empty);
+}
+<span class="text-warning">@starStr</span>
