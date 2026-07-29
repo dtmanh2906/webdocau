@@ -111,13 +111,13 @@ Website được xây dựng bằng **ASP.NET Core MVC**, sử dụng **Entity F
 
 Hệ thống gồm các bảng chính:
 
-+AspNetUsers : Lưu thông tin tài khoản
-+AspNetRoles : Phân quyền 
-+Categories : Danh mục sản phẩm 
-+Products : Thông tin sản phẩm 
-+Orders : Thông tin đơn hàng 
-+OrderItems : Chi tiết đơn hàng
-+Reviews : Đánh giá sản phẩm 
++AspNetUsers : Lưu thông tin tài khoản 
++AspNetRoles : Phân quyền  
++Categories : Danh mục sản phẩm  
++Products : Thông tin sản phẩm  
++Orders : Thông tin đơn hàng  
++OrderItems : Chi tiết đơn hàng 
++Reviews : Đánh giá sản phẩm  
 
 
 ---
